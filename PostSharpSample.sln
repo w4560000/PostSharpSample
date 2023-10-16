@@ -5,15 +5,17 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aspect Framework", "Aspect Framework", "{5BA7A320-308C-43F5-92CD-52174530A89A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.AutoRetry", "Aspect Framework\PostSharpSample.AutoRetry\PostSharpSample.AutoRetry.csproj", "{3B7A3DE9-8FAD-46B0-B7FB-EBAD89A898B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.AutoRetry", "Aspect Framework\PostSharpSample.AutoRetry\PostSharpSample.AutoRetry.csproj", "{3B7A3DE9-8FAD-46B0-B7FB-EBAD89A898B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.Logging.Console", "Logging\PostSharpSample.Logging.Console\PostSharpSample.Logging.Console.csproj", "{9CDC82D4-FAA2-4C01-8866-D8ECC5AFE2BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Logging.Console", "Logging\PostSharpSample.Logging.Console\PostSharpSample.Logging.Console.csproj", "{9CDC82D4-FAA2-4C01-8866-D8ECC5AFE2BE}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PostSharpSample.Logging.BusinessLogic", "Logging\PostSharpSample.Logging.BusinessLogic\PostSharpSample.Logging.BusinessLogic.shproj", "{DBB7C918-FA39-48EA-8DB5-858139C6C51E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.Logging.NLog", "Logging\PostSharpSample.Logging.NLog\PostSharpSample.Logging.NLog.csproj", "{4C500D2A-5EE1-46C3-8670-DB616D030C98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Logging.NLog", "Logging\PostSharpSample.Logging.NLog\PostSharpSample.Logging.NLog.csproj", "{4C500D2A-5EE1-46C3-8670-DB616D030C98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.Logging.Audit", "Logging\PostSharpSample.Logging.Audit\PostSharpSample.Logging.Audit.csproj", "{FACE3F2C-00C9-490C-9C1A-171B91714DAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4C500D2A-5EE1-46C3-8670-DB616D030C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C500D2A-5EE1-46C3-8670-DB616D030C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C500D2A-5EE1-46C3-8670-DB616D030C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACE3F2C-00C9-490C-9C1A-171B91714DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACE3F2C-00C9-490C-9C1A-171B91714DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACE3F2C-00C9-490C-9C1A-171B91714DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACE3F2C-00C9-490C-9C1A-171B91714DAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 		{9CDC82D4-FAA2-4C01-8866-D8ECC5AFE2BE} = {4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}
 		{DBB7C918-FA39-48EA-8DB5-858139C6C51E} = {4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}
 		{4C500D2A-5EE1-46C3-8670-DB616D030C98} = {4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}
+		{FACE3F2C-00C9-490C-9C1A-171B91714DAD} = {4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C081DEC-BC3E-4DE2-BCC1-FAEFF04EADC2}
