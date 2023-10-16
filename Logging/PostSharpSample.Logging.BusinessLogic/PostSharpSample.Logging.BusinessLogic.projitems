@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>dbb7c918-fa39-48ea-8db5-858139c6c51e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>PostSharpSample.Logging.BusinessLogic</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)QQTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueueItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueueProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Request.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)User.cs" />
+  </ItemGroup>
+</Project>
