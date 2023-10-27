@@ -15,7 +15,15 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PostSharpSample.Logging.Bus
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Logging.NLog", "Logging\PostSharpSample.Logging.NLog\PostSharpSample.Logging.NLog.csproj", "{4C500D2A-5EE1-46C3-8670-DB616D030C98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.Logging.Audit", "Logging\PostSharpSample.Logging.Audit\PostSharpSample.Logging.Audit.csproj", "{FACE3F2C-00C9-490C-9C1A-171B91714DAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Logging.Audit", "Logging\PostSharpSample.Logging.Audit\PostSharpSample.Logging.Audit.csproj", "{FACE3F2C-00C9-490C-9C1A-171B91714DAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{F2E211CE-87EF-4588-8B02-4C1BC27D587A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Contracts", "Contracts\PostSharpSample.Contracts\PostSharpSample.Contracts.csproj", "{7D2E8F2E-573A-482C-8719-E00A0B08B07B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Logging.FormattingLogRecord", "Logging\PostSharpSample.Logging.FormattingLogRecord\PostSharpSample.Logging.FormattingLogRecord.csproj", "{89750E61-EE74-4C10-BC56-D7A77CAABB38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.CustomContracts", "Contracts\PostSharpSample.CustomContracts\PostSharpSample.CustomContracts.csproj", "{E4270748-D189-41E5-AF62-E61DC46600E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +47,18 @@ Global
 		{FACE3F2C-00C9-490C-9C1A-171B91714DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FACE3F2C-00C9-490C-9C1A-171B91714DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FACE3F2C-00C9-490C-9C1A-171B91714DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D2E8F2E-573A-482C-8719-E00A0B08B07B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2E8F2E-573A-482C-8719-E00A0B08B07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2E8F2E-573A-482C-8719-E00A0B08B07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2E8F2E-573A-482C-8719-E00A0B08B07B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89750E61-EE74-4C10-BC56-D7A77CAABB38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89750E61-EE74-4C10-BC56-D7A77CAABB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89750E61-EE74-4C10-BC56-D7A77CAABB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89750E61-EE74-4C10-BC56-D7A77CAABB38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4270748-D189-41E5-AF62-E61DC46600E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4270748-D189-41E5-AF62-E61DC46600E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4270748-D189-41E5-AF62-E61DC46600E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4270748-D189-41E5-AF62-E61DC46600E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,12 +69,16 @@ Global
 		{DBB7C918-FA39-48EA-8DB5-858139C6C51E} = {4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}
 		{4C500D2A-5EE1-46C3-8670-DB616D030C98} = {4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}
 		{FACE3F2C-00C9-490C-9C1A-171B91714DAD} = {4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}
+		{7D2E8F2E-573A-482C-8719-E00A0B08B07B} = {F2E211CE-87EF-4588-8B02-4C1BC27D587A}
+		{89750E61-EE74-4C10-BC56-D7A77CAABB38} = {4DDA1A0E-27A0-47E3-940D-5EF91F2D16CB}
+		{E4270748-D189-41E5-AF62-E61DC46600E3} = {F2E211CE-87EF-4588-8B02-4C1BC27D587A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C081DEC-BC3E-4DE2-BCC1-FAEFF04EADC2}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Logging\PostSharpSample.Logging.BusinessLogic\PostSharpSample.Logging.BusinessLogic.projitems*{4c500d2a-5ee1-46c3-8670-db616d030c98}*SharedItemsImports = 5
+		Logging\PostSharpSample.Logging.BusinessLogic\PostSharpSample.Logging.BusinessLogic.projitems*{89750e61-ee74-4c10-bc56-d7a77caabb38}*SharedItemsImports = 5
 		Logging\PostSharpSample.Logging.BusinessLogic\PostSharpSample.Logging.BusinessLogic.projitems*{9cdc82d4-faa2-4c01-8866-d8ecc5afe2be}*SharedItemsImports = 5
 		Logging\PostSharpSample.Logging.BusinessLogic\PostSharpSample.Logging.BusinessLogic.projitems*{dbb7c918-fa39-48ea-8db5-858139c6c51e}*SharedItemsImports = 13
 	EndGlobalSection

@@ -2,13 +2,12 @@
 using PostSharp.Patterns.Diagnostics.Audit;
 using PostSharp.Patterns.Diagnostics.Backends.Audit;
 using System.Security.Principal;
-using System;
 
 namespace PostSharpSample.Logging.Audit
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Configure the audit backend.
             LoggingServices.Roles["Audit"].Backend = new AuditBackend();
@@ -19,7 +18,6 @@ namespace PostSharpSample.Logging.Audit
             // Simulate some audited business operation.
             var po = new PurchaseOrder();
             po.Approve("123");
-
         }
 
         private static void OnAuditRecordPublished(object sender, AuditRecordEventArgs e)

@@ -1,14 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PostSharp.Patterns.Diagnostics;
 
 namespace PostSharpSample.Logging.BusinessLogic
 {
-  public class QQTest
-  {
-    public static string Test(string param)
+    public class QQTest
     {
-      return param + "123";
+        [return: NotLogged]
+        public static string Test([NotLogged] Test param)
+        {
+            return param.A + param.B;
+        }
     }
-  }
+
+    public class Test
+    {
+        public string A { get; set; }
+        public string B { get; set; }
+    }
 }
