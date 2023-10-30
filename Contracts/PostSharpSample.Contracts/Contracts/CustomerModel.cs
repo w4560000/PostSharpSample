@@ -2,7 +2,7 @@
 
 using PostSharp.Patterns.Contracts;
 
-namespace PostSharpSample.Contracts
+namespace PostSharpSample.Contracts.Contracts
 {
     public interface ICustomerModel
     {
@@ -15,7 +15,7 @@ namespace PostSharpSample.Contracts
 
         public void SetFullName(string firstName, string lastName)
         {
-            this.FullName = firstName + " " + lastName;
+            FullName = firstName + " " + lastName;
         }
     }
 }
