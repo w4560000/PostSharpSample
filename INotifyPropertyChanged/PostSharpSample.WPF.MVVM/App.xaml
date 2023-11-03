@@ -1,7 +1,7 @@
-﻿<Application x:Class="PostSharpSample.WPF.App"
+﻿<Application x:Class="PostSharpSample.WPF.MVVM.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PostSharpSample.WPF"
+             xmlns:local="clr-namespace:PostSharpSample.WPF.MVVM"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace PostSharpSample.WPF
+namespace PostSharpSample.WPF.MVVMCommonTool
 {
     /// <summary>
     /// Interaction logic for App.xaml

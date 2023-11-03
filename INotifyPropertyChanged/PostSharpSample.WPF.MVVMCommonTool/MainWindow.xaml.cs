@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace PostSharpSample.WPF
+namespace PostSharpSample.WPF.MVVMCommonTool
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
