@@ -4,7 +4,7 @@ namespace PostSharpSample.WPF.MVVM
 {
     public class PostsViewModel : INotifyPropertyChanged
     {
-        public Posts Posts { get; set; } = new Posts { PostsTitle1 = "postsTitle1Unknown", PostsTitle2 = "postsTitle2Unknown" };
+        public Posts Posts { get; set; } = new Posts { PostsTitle1 = "TestPostsTitle1", PostsTitle2 = "TestPostsTitle2" };
 
         public event PropertyChangedEventHandler PropertyChanged;
 

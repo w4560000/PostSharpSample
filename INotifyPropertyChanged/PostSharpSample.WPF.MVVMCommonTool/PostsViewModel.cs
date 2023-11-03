@@ -4,7 +4,7 @@ namespace PostSharpSample.WPF.MVVMCommonTool
 {
     public class PostsViewModel : ObservableObject
     {
-        public Posts Posts { get; set; } = new Posts { PostsTitle1 = "postsTitle1Unknown", PostsTitle2 = "postsTitle2Unknown" };
+        public Posts Posts { get; set; } = new Posts { PostsTitle1 = "TestPostsTitle1", PostsTitle2 = "TestPostsTitle2" };
 
         public string ModelPostsTitle1
         {
