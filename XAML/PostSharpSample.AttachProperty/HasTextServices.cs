@@ -33,15 +33,15 @@ namespace PostSharpSample.AttachProperty
 
         private static void OnIsEnabledChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var tb = d as TextBox;
-            if ((bool)e.NewValue)
-            {
-                tb.TextChanged += Tb_TextChanged;
-            }
-            else
-            {
-                tb.TextChanged -= Tb_TextChanged;
-            }
+            //var tb = d as TextBox;
+            //if ((bool)e.NewValue)
+            //{
+            //    tb.TextChanged += Tb_TextChanged;
+            //}
+            //else
+            //{
+            //    tb.TextChanged -= Tb_TextChanged;
+            //}
         }
 
         private static void Tb_TextChanged(object sender, TextChangedEventArgs e)
