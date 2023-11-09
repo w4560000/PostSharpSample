@@ -49,6 +49,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.AttachPrope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.AttachPropertyPostSharp", "XAML\PostSharpSample.AttachPropertyPostSharp\PostSharpSample.AttachPropertyPostSharp.csproj", "{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.Aggregatable", "Aspect Framework\PostSharpSample.Aggregatable\PostSharpSample.Aggregatable.csproj", "{5B20DFFD-E47E-441A-8460-CC42EE55644E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,10 @@ Global
 		{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B20DFFD-E47E-441A-8460-CC42EE55644E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B20DFFD-E47E-441A-8460-CC42EE55644E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B20DFFD-E47E-441A-8460-CC42EE55644E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B20DFFD-E47E-441A-8460-CC42EE55644E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +147,7 @@ Global
 		{514F67C5-A7DF-4293-B5DC-D444D18D4E92} = {02329604-776A-4D4F-84E9-E7EDF6E178F8}
 		{8B967308-EA8E-49FA-A143-E80852D6BDB7} = {02329604-776A-4D4F-84E9-E7EDF6E178F8}
 		{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD} = {02329604-776A-4D4F-84E9-E7EDF6E178F8}
+		{5B20DFFD-E47E-441A-8460-CC42EE55644E} = {5BA7A320-308C-43F5-92CD-52174530A89A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C081DEC-BC3E-4DE2-BCC1-FAEFF04EADC2}
