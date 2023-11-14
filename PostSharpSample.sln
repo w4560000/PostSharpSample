@@ -47,9 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.DPPropertyP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.AttachProperty", "XAML\PostSharpSample.AttachProperty\PostSharpSample.AttachProperty.csproj", "{8B967308-EA8E-49FA-A143-E80852D6BDB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.AttachPropertyPostSharp", "XAML\PostSharpSample.AttachPropertyPostSharp\PostSharpSample.AttachPropertyPostSharp.csproj", "{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.AttachPropertyPostSharp", "XAML\PostSharpSample.AttachPropertyPostSharp\PostSharpSample.AttachPropertyPostSharp.csproj", "{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.Aggregatable", "Aspect Framework\PostSharpSample.Aggregatable\PostSharpSample.Aggregatable.csproj", "{5B20DFFD-E47E-441A-8460-CC42EE55644E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Aggregatable", "Aspect Framework\PostSharpSample.Aggregatable\PostSharpSample.Aggregatable.csproj", "{5B20DFFD-E47E-441A-8460-CC42EE55644E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.Caching", "Aspect Framework\PostSharpSample.Caching\PostSharpSample.Caching.csproj", "{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +127,10 @@ Global
 		{5B20DFFD-E47E-441A-8460-CC42EE55644E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B20DFFD-E47E-441A-8460-CC42EE55644E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B20DFFD-E47E-441A-8460-CC42EE55644E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +154,7 @@ Global
 		{8B967308-EA8E-49FA-A143-E80852D6BDB7} = {02329604-776A-4D4F-84E9-E7EDF6E178F8}
 		{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD} = {02329604-776A-4D4F-84E9-E7EDF6E178F8}
 		{5B20DFFD-E47E-441A-8460-CC42EE55644E} = {5BA7A320-308C-43F5-92CD-52174530A89A}
+		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D} = {5BA7A320-308C-43F5-92CD-52174530A89A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C081DEC-BC3E-4DE2-BCC1-FAEFF04EADC2}
