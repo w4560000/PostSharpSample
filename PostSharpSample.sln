@@ -51,7 +51,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.AttachPrope
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Aggregatable", "Aspect Framework\PostSharpSample.Aggregatable\PostSharpSample.Aggregatable.csproj", "{5B20DFFD-E47E-441A-8460-CC42EE55644E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharpSample.Caching", "Aspect Framework\PostSharpSample.Caching\PostSharpSample.Caching.csproj", "{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Caching", "Aspect Framework\PostSharpSample.Caching\PostSharpSample.Caching.csproj", "{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Multithreading", "Multithreading", "{8E67F99C-AF21-40BB-9674-5984FD2E672C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Immutable", "Multithreading\PostSharpSample.Immutable\PostSharpSample.Immutable.csproj", "{6FEF68B7-237E-46A6-83A6-C127D167E963}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Freeze", "Multithreading\PostSharpSample.Freeze\PostSharpSample.Freeze.csproj", "{A37771E5-626F-4F81-B4A5-D35ADC52DEA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharpSample.Multithreading", "Multithreading\PostSharpSample.Multithreading\PostSharpSample.Multithreading.csproj", "{FF792623-5DE6-4736-AD67-1DB8B4FBEE44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +139,18 @@ Global
 		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEF68B7-237E-46A6-83A6-C127D167E963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEF68B7-237E-46A6-83A6-C127D167E963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEF68B7-237E-46A6-83A6-C127D167E963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEF68B7-237E-46A6-83A6-C127D167E963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A37771E5-626F-4F81-B4A5-D35ADC52DEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37771E5-626F-4F81-B4A5-D35ADC52DEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37771E5-626F-4F81-B4A5-D35ADC52DEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37771E5-626F-4F81-B4A5-D35ADC52DEA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF792623-5DE6-4736-AD67-1DB8B4FBEE44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF792623-5DE6-4736-AD67-1DB8B4FBEE44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF792623-5DE6-4736-AD67-1DB8B4FBEE44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF792623-5DE6-4736-AD67-1DB8B4FBEE44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -155,6 +175,9 @@ Global
 		{C65DDFAE-FCCF-46EC-8F45-850DAB9F3CDD} = {02329604-776A-4D4F-84E9-E7EDF6E178F8}
 		{5B20DFFD-E47E-441A-8460-CC42EE55644E} = {5BA7A320-308C-43F5-92CD-52174530A89A}
 		{1111BD1F-6BC8-48E6-98F0-4C6679ADD69D} = {5BA7A320-308C-43F5-92CD-52174530A89A}
+		{6FEF68B7-237E-46A6-83A6-C127D167E963} = {8E67F99C-AF21-40BB-9674-5984FD2E672C}
+		{A37771E5-626F-4F81-B4A5-D35ADC52DEA0} = {8E67F99C-AF21-40BB-9674-5984FD2E672C}
+		{FF792623-5DE6-4736-AD67-1DB8B4FBEE44} = {8E67F99C-AF21-40BB-9674-5984FD2E672C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C081DEC-BC3E-4DE2-BCC1-FAEFF04EADC2}

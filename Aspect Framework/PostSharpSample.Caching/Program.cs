@@ -27,7 +27,7 @@ namespace PostSharpSample.Caching
                 Thread.Sleep(1000);
 
                 if (sw.ElapsedMilliseconds / 1000 > 10)
-                    ClearCache();
+                    ClearCache(1);
             }
             Console.WriteLine("Retrieving value of 1 for the 1st time should hit the database.");
             Console.WriteLine("Retrieved: " + GetNumber(1));
@@ -53,7 +53,7 @@ namespace PostSharpSample.Caching
         }
 
         [InvalidateCache(nameof(GetNumber))]
-        static void ClearCache()
+        static void ClearCache(int id)
         {
 
         }
