@@ -8,7 +8,9 @@ namespace PostSharpSample.Multithreading
         {
             //new ThreadAffineSample().Main();
 
-            new ThreadSynchronizedSample().Main();
+            //new ThreadSynchronizedSample().Main();
+
+            new ReadWriteLockSample().Main();
 
             Console.ReadKey();
         }
