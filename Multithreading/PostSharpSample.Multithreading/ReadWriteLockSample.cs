@@ -24,9 +24,14 @@ namespace PostSharpSample.Multithreading
     {
         public void Main()
         {
-            // Original();
+            //Original();
 
-            PostSharpSample();
+            // 僅有單一執行續獲得寫鎖，佔據寫鎖時，無法讀取
+            //PostSharpSample();
+
+            // UpgradeableReader 能確保只有當前執行續能取得寫鎖
+            // 且無讀鎖限制，用在需長時間執行寫入方法，會佔據寫鎖，但仍然可以讀
+            PostSharpSampleV2();
         }
 
         /// <summary>
@@ -37,24 +42,24 @@ namespace PostSharpSample.Multithreading
             List<Task> tasks = new List<Task>();
             var test = new ReadWriteLock();
             test.Set(999, 0);
-            var task1 = Task.Run(() =>
+            tasks.Add(Task.Run(() =>
             {
                 while (true)
                 {
                     Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 讀取:{test.AmountAfterDiscount}, Time:{DateTime.Now:mm:ss.fff}");
                     Thread.Sleep(100);
                 }
-            });
+            }));
 
-            var task2 = Task.Run(() =>
+            tasks.Add(Task.Run(() =>
             {
                 for (int i = 1; i <= 100; i++)
                 {
                     Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改    , Time:{DateTime.Now:mm:ss.fff}");
                     test.Set(test.AmountAfterDiscount, i);
-                    Thread.Sleep(10000);
+                    //Thread.Sleep(10000);
                 }
-            });
+            }));
 
             Task.WaitAll(tasks.ToArray());
         }
@@ -62,29 +67,77 @@ namespace PostSharpSample.Multithreading
         private void PostSharpSample()
         {
             List<Task> tasks = new List<Task>();
-            var test = new ReadWriteLockPostSharp();
-            test.Set(999, 0);
-            var task1 = Task.Run(() =>
+            var test = new ReadWriteLockPostSharp(999, 0);
+            tasks.Add(Task.Run(() =>
             {
                 while (true)
                 {
                     Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 讀取:{test.AmountAfterDiscount()}, Time:{DateTime.Now:mm:ss.fff}");
                     Thread.Sleep(100);
                 }
-            });
+            }));
 
-            var task2 = Task.Run(() =>
+            tasks.Add(Task.Run(() =>
             {
                 for (int i = 1; i <= 100; i++)
                 {
-                    Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改    , Time:{DateTime.Now:mm:ss.fff}");
                     test.Set(test.AmountAfterDiscount(), i);
+                    Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改後    , Time:{DateTime.Now:mm:ss.fff}");
                     Thread.Sleep(10000);
+                }
+            }));
+
+            tasks.Add(Task.Run(() =>
+            {
+                for (int i = 1; i <= 100; i++)
+                {
+                    test.Set(test.AmountAfterDiscount(), i);
+                    Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改後    , Time:{DateTime.Now:mm:ss.fff}");
+                    Thread.Sleep(10000);
+                }
+            }));
+
+            Task.WaitAll(tasks.ToArray());
+        }
+
+        private void PostSharpSampleV2()
+        {
+            List<Task> tasks = new List<Task>();
+            var test = new Order();
+            var task1 = Task.Run(() =>
+            {
+                while (true)
+                {
+                    Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 讀取:{test.Amount}, Time:{DateTime.Now:mm:ss.fff}");
+                    Thread.Sleep(100);
                 }
             });
 
-            Task.WaitAll(tasks.ToArray());
+            tasks.Add(Task.Run(() =>
+            {
+                for (int i = 1; i <= 100; i++)
+                {
+                    //Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改前    , Time:{DateTime.Now:mm:ss.fff}");
+                    test.Recalculate();
+                    Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改後    , Time:{DateTime.Now:mm:ss.fff}");
+                    //Thread.Sleep(10000);
+                }
+            }));
 
+            //Thread.Sleep(5000);
+
+            tasks.Add(Task.Run(() =>
+            {
+                for (int i = 1; i <= 100; i++)
+                {
+                    //Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改前    , Time:{DateTime.Now:mm:ss.fff}");
+                    test.Recalculate();
+                    Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改後    , Time:{DateTime.Now:mm:ss.fff}");
+                    //Thread.Sleep(10000);
+                }
+            }));
+
+            Task.WaitAll(tasks.ToArray());
         }
     }
 
@@ -125,11 +178,19 @@ namespace PostSharpSample.Multithreading
 
     #endregion Original
 
+    #region PostSharpSample
+
     [ReaderWriterSynchronized]
     public class ReadWriteLockPostSharp
     {
         public decimal Amount { get; private set; }
         public decimal Discount { get; private set; }
+
+        public ReadWriteLockPostSharp(decimal amount, decimal discount)
+        {
+            this.Amount = amount;
+            this.Discount = discount;
+        }
 
         [Reader]
         public decimal AmountAfterDiscount()
@@ -150,4 +211,42 @@ namespace PostSharpSample.Multithreading
             this.Discount = discount;
         }
     }
-}
+
+    #endregion PostSharpSample
+
+    #region PostSharpSampleV2
+
+    [ReaderWriterSynchronized]
+    internal class Order
+    {
+        // Other details skipped for brevity.
+
+        public decimal Amount
+        {
+            // The [Reader] attribute optional here is optional because the method is a public getter.
+            get;
+
+            // The [Writer] attribute is required because, although the method is a setter, this setter is private,
+            // therefore is does not acquire write access by default.
+            [Writer]
+            private set;
+        }
+
+        [UpgradeableReader]
+        public void Recalculate()
+        {
+            decimal total = 0;
+
+            for (int i = 1; i < 100; i++)
+            {
+                total += i;
+            }
+
+            Console.WriteLine($"ThreadID: {Thread.CurrentThread.ManagedThreadId}, 修改中    , Time:{DateTime.Now:mm:ss.fff}");
+            Thread.Sleep(3000);
+            this.Amount = total;
+        }
+    }
+
+    #endregion PostSharpSampleV2
+} 
