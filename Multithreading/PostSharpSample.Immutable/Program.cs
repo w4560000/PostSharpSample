@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace PostSharpSample.Immutable
 {
+    /// <summary>
+    /// /https://doc.postsharp.net/threading/immutable
+    /// </summary>
     internal class Program
     {
         private static void Main(string[] args)

@@ -8,6 +8,15 @@ using System.Threading.Tasks;
 
 namespace PostSharpSample.SimpleAspect
 {
+    /// <summary>
+    /// 攔截方法
+    /// OnEntry = 執行前
+    /// OnSuccess = 執行成功 (當發生錯誤則不會執行)
+    /// OnExit = 結束 (不管成功或異常 都會執行到)
+    /// OnException = 異常
+    /// 
+    /// https://doc.postsharp.net/custompatterns/aspects/tutorials/method-decorator
+    /// </summary>
     public class OnMethodBoundaryAspectSample
     {
         public void Main()
@@ -61,6 +70,7 @@ namespace PostSharpSample.SimpleAspect
     /// 標準用法
     /// </summary>
     [PSerializable]
+    [AspectDescription("Applies the exception handling policy")]
     public class LoggingAspect : PostSharp.Aspects.OnMethodBoundaryAspect
     {
         public override void OnEntry(MethodExecutionArgs args)

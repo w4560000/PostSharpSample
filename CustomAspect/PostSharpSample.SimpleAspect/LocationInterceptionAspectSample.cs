@@ -6,7 +6,9 @@ using System.ComponentModel;
 namespace PostSharpSample.SimpleAspect
 {
     /// <summary>
-    /// Property and Field
+    /// 攔截 Property and Field Getter & Setter
+    /// 
+    /// https://doc.postsharp.net/custompatterns/aspects/tutorials/location-interception
     /// </summary>
     public class LocationInterceptionAspectSample
     {

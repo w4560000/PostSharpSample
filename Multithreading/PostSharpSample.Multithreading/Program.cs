@@ -3,6 +3,12 @@ using System.Threading.Tasks;
 
 namespace PostSharpSample.Multithreading
 {
+    /// <summary>
+    /// https://doc.postsharp.net/threading/thread-affine
+    /// https://doc.postsharp.net/threading/synchronized
+    /// https://doc.postsharp.net/threading/reader-writer-synchronized
+    /// https://doc.postsharp.net/threading/actor
+    /// </summary>
     internal class Program
     {
         private static async Task Main(string[] args)

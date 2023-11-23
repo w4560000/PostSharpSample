@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace PostSharpSample.Aggregatable
 {
+    /// <summary>
+    /// https://doc.postsharp.net/model/aggregatable/aggregatable-adding
+    /// </summary>
     internal class Program
     {
         private static void Main(string[] args)

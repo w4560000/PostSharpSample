@@ -5,6 +5,11 @@ using System.Threading.Tasks;
 
 namespace PostSharpSample.SimpleAspect
 {
+    /// <summary>
+    /// 客製化 Method 前後動作
+    ///
+    /// https://doc.postsharp.net/custompatterns/aspects/method-interception
+    /// </summary>
     public class MethodInterceptionAspectSample
     {
         [RetryOnException]

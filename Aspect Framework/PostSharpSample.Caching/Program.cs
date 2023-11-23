@@ -6,6 +6,11 @@ using System.Diagnostics;
 
 namespace PostSharpSample.Caching
 {
+    /// <summary>
+    /// 快取
+    /// 
+    /// https://doc.postsharp.net/caching/caching-getting-started
+    /// </summary>
     internal class Program
     {
         static void Main(string[] args)

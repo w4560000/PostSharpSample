@@ -7,6 +7,9 @@ using PostSharpSample.Logging.BusinessLogic;
 
 namespace PostSharpSample.Logging.Console
 {
+    /// <summary>
+    /// https://doc.postsharp.net/logging
+    /// </summary>
     [Log(AttributeExclude = false)]   // Removes logging from the Program class itself.
     internal class Program
     {

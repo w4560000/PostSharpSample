@@ -6,6 +6,11 @@ using System;
 
 namespace PostSharpSample.Contracts
 {
+    /// <summary>
+    /// 約束
+    /// 
+    /// https://doc.postsharp.net/model/contracts/adding-contracts
+    /// </summary>
     internal class Program
     {
         private static void Main(string[] args)

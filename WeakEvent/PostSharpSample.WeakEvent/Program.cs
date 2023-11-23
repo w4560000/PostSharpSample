@@ -4,6 +4,9 @@ using System;
 
 namespace PostSharpSample.WeakEvent
 {
+    /// <summary>
+    /// https://doc.postsharp.net/model/weakevent/weak-event
+    /// </summary>
     internal class Program
     {
         private static void Main(string[] args)

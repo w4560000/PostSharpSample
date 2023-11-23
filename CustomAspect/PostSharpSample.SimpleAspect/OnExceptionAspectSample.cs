@@ -7,6 +7,11 @@ using System.Reflection;
 
 namespace PostSharpSample.SimpleAspect
 {
+    /// <summary>
+    /// 攔截異常Exception
+    /// 
+    /// https://doc.postsharp.net/custompatterns/aspects/tutorials/exception-handling
+    /// </summary>
     //[PrintExceptionV1]
     //[PrintExceptionV2(typeof(IOException))] // 可只指定攔截某個 Exception
 

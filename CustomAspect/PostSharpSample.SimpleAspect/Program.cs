@@ -15,7 +15,9 @@ namespace PostSharpSample.SimpleAspect
 
             // await new MethodInterceptionAspectSample().MainAsync();
 
-            new LocationInterceptionAspectSample().Main();
+            //new LocationInterceptionAspectSample().Main();
+
+            new EventInterceptionAspectSample().Main();
 
             Console.ReadKey();
         }

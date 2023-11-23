@@ -4,6 +4,8 @@ namespace PostSharpSample.WPF.MVVMPostSharp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// 
+    /// https://doc.postsharp.net/xaml
     /// </summary>
     public partial class MainWindow : Window
     {

@@ -3,6 +3,9 @@ using System;
 
 namespace PostSharpSample.Freeze
 {
+    /// <summary>
+    /// https://doc.postsharp.net/threading/freezable
+    /// </summary>
     internal class Program
     {
         static void Main(string[] args)
