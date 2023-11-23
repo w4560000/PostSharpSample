@@ -9,7 +9,13 @@ namespace PostSharpSample.SimpleAspect
         {
             //new OnMethodBoundaryAspectSample().Main();
 
-            var number = new OnExceptionAspectSample().Main();
+            //var number = new OnExceptionAspectSample().Main();
+
+            //new MethodInterceptionAspectSample().Main();
+
+            // await new MethodInterceptionAspectSample().MainAsync();
+
+            new LocationInterceptionAspectSample().Main();
 
             Console.ReadKey();
         }
