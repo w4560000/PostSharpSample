@@ -7,7 +7,9 @@ namespace PostSharpSample.SimpleAspect
     {
         private static async Task Main(string[] args)
         {
-            new OnMethodBoundaryAspectSample().Main();
+            //new OnMethodBoundaryAspectSample().Main();
+
+            var number = new OnExceptionAspectSample().Main();
 
             Console.ReadKey();
         }
